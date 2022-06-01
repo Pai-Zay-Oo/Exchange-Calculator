@@ -28,17 +28,36 @@
     <link rel="stylesheet" href="./vendor/fontawesome/css/all.min.css">
 </head>
 <body>
-    <div class="container">
+    <div class="main">
         <div class="part1">
             <div class="brand-container">
                 <img src="./img/logo.svg" alt="">
-                <h1>MMEx</h1>
+                <h1>MMExchange</h1>
             </div>
-            <div class="result">
+            <div class="result" id="result">
                 <p>0.00</p>
             </div>
         </div>
         <div class="divider"></div>
+        <form class="calc-area" id="area">
+            <div class="input-container container">
+                <label class="label">Input</label>
+                <input type="number" id="input" placeholder="0.00" required min="1" autofocus>
+            </div>
+            <div class="from-container container">
+                <label class="label">From</label>
+                <select  id="from" class="se" required select="selected">
+                    <option value="" selected>Select Currency</option>
+                </select>
+            </div>
+            <div class="to-container container">
+                <label class="label">To</label>
+                <select  id="to" class="se" required></select>
+            </div>
+            <div class="calc-container container">
+                <button id="calculate">Calculate</button>
+            </div>
+        </form>
         
     </div>
    
