@@ -164,8 +164,8 @@ select {
     border: none;
     background: var(--dark);
     position: fixed;
-    bottom: 50px;
-    right: 50px;
+    top: 2px;
+    right: 12px;
 }
 
 

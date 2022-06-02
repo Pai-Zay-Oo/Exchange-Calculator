@@ -29,9 +29,9 @@ function createTr(x){
     });
     recordList.append(tr);
 };
-function recording(){
-    localStorage.setItem("record",recordList.innerHTML);
-}
+// function recording(){
+//     localStorage.setItem("record",recordList.innerHTML);
+// }
 
 for (x in data.rates){
     createOption(to,x,data.rates[x]);
@@ -55,7 +55,7 @@ document.getElementById("area").addEventListener("submit",function(e){
     let date = new Date().toLocaleString();
     let arr = [date,fromShow,toShow,resultNum];
     createTr(arr);
-    recording();
+   
 
     //Set State
     result.innerHTML = second.toFixed(2);
@@ -65,16 +65,16 @@ document.getElementById("area").addEventListener("submit",function(e){
     result.value = 0.00;
 });
 
-function aa(){
-    console.log(from.options[from.selectedIndex].innerText);
-};
-(function () {
-    if(localStorage.getItem("record")){
-        recordList.innerHTML = localStorage.getItem("record");
-    }else{
-        recordList.innerHTML = `<tr id="rowSpace"><td colspan="4">There is no record.</td></tr>`
-    }
-})();
+// function aa(){
+//     console.log(from.options[from.selectedIndex].innerText);
+// };
+// (function () {
+//     if(localStorage.getItem("record")){
+//         recordList.innerHTML = localStorage.getItem("record");
+//     }else{
+//         recordList.innerHTML = `<tr id="rowSpace"><td colspan="4">There is no record.</td></tr>`
+//     }
+// })();
 
 function changeMode() {
     document.body.classList.toggle("night-mode");
